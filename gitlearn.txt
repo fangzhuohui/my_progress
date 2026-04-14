@@ -1,4 +1,5 @@
 
 我创建这个文件的目的就是想知道git
-push不是是锁定好上传到哪个仓库吗，我现在想修改仓库看git mote set-url origin
-https://github.com/你的用户名/learngit.git是不是真的可以修改仓库到这个learngit
+push不是是锁定好上传到哪个仓库吗，我现在想修改仓库看
+git remote set-url origin https://github.com/你的用户名/learngit.git
+是不是真的可以修改仓库到这个learngit
