@@ -1,0 +1,11 @@
+# 1. 查看当前远程
+git remote -v
+
+# 2. 修改远程地址
+git remote set-url origin https://github.com/你的用户名/learngit.git
+
+# 3. 确认
+git remote -v
+
+# 4. 推送
+git push
