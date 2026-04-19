@@ -1,0 +1,38 @@
+// 对于二叉树求最大深度
+#incldue <stdio.h>
+#include <stdlib.h>
+
+typedef struct TreeNode {
+	int datal
+	struct TreeNode *left;
+	struct TreeNode *right;
+} TreeNode;
+
+int treenode_max_depth(TreeNode *root) {
+	if (root == NULL) {
+		return 0;
+	}
+	int left = treenode_max_depth(root->left);
+	int right = treenode_max_depth(root->right);
+
+	return (left > right ? left : right) + 1;
+}
+// 对于二叉树求最小深度
+int treenode_min_depth(TreeNode *root) {
+	if (root == NULL) {
+		return 0;
+	}
+	int left = treenode_min_depth(root->left);
+	int right = treenode_min_depth(root->right);
+	// 重点注意！！
+	// 求最小深度不能直接像求最大深度一样 return (left < right ? left : right) + 1;
+	// 因为可能这棵树只有左子树没有右子树，这样写就会使得答案为0，是错误的
+	// 关键修改代码如下
+	if (root->left == NULL) {
+		return right + 1;
+	}
+	if (root->right == NULL) {
+		return left + 1;
+	}
+	return (left < right ? left : right) + 1;
+}
