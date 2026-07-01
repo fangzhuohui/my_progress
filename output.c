@@ -1,3 +1,4 @@
+// UTF-8 encoded file
 /**
  * output.c — 大规模测试数据生成器
  * 根据用户输入的记录条数 N，生成 N 条选课记录到 D:\file.csv
